@@ -52,24 +52,24 @@
             <div class="row justify-content-center">
               <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
                   <header class="ds-work-det-hed">
-                      <h1 class="ds-work-det-title">Tripy mobile app</h1>
-                      <span class="ds-work-det-dep">Mobile development - 2019</span>
+                      <h1 class="ds-work-det-title">Food Recognition and Recommender System</h1>
+                      <span class="ds-work-det-dep">Georgia Tech Machine Learning Class Project, 2022</span>
                   </header>
-                  <figure><img src="assets/images/work-details-image-1.jpg"></figure>
+                  <figure><img src="assets/images/ml_project_pipeline (1).jpeg"></figure>
                   <div class="ds-work-content-sec">
                       <div class="row justify-content-center">
                           <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                              <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
+                              <p>An Machine Learning system created as part of the CS 7641 class at Georgia Tech, that aids multiple aspects of Meal Choice decision using Image Recognition and Recommender Systems. </p>
 
                               <p>Curabitur quis tortor sit amet ligula lobortis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ut turpis eget urna egestas maximus. </p>
 
-                              <h2>Sub Title for project</h2>
+                              <h2>We divide our project pipeline into three main stages:</h2>
                               <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
 
                               <ul>
-                                <li>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non.</li>
-                                 <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus.</li>
-                                 <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus.</li>
+                                <li>Classfication System: This stage would take as input food images and passes them through a CNN to output food labels. The output of this stage is (Output 1), and flows to next stage, but can also be used independently.</li>
+                                 <li>Food to Ingredient Mapping: Output 1 from CNN is then queried through a database housing the mapping between food items and their respective ingredients, to yield Output 2. This can again either be used independently or overlaid over recommendation system as a filter.</li>
+                                 <li>Recommendation System: In this stage we reccommend the user additional food items: Output 3 basis his (&other individuals) interactions. We also allow for the user to place additional constraints over the recommendations.</li>
                               </ul>
                           </div>
                       </div>
