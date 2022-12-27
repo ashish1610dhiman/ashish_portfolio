@@ -13,6 +13,9 @@ Theme Name: Jason Stroff
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------*/
+:root {
+	--highlight-colour: #F26464;
+}
 html {font-family: 'Inter', sans-serif;background-color:#FFF}
 body {font-family: 'Inter', sans-serif;overflow-x: hidden; background-color:#FFF; font-weight:400;font-style: normal; color:#373737; font-size:14px}
 a,a:hover,a:focus,i,input,button,input:focus,.transition {text-decoration: none;outline: none;transition-delay: 0s;transition-duration: 0.4s;transition-property: all;transition-timing-function: ease;box-shadow: none;}
@@ -44,7 +47,7 @@ svg,img { max-width: 100%; height: auto; }
 .ds-social{ list-style: none; display: flex; align-items: center; flex-wrap: wrap; }
 .ds-social li{ margin-left: 12px; }
 .ds-social li:first-child{ margin-left: 0; }
-.ds-social li a{ border-radius: 100%; color: #FFF; width: 24px; height: 24px; background-color: #F26464; display:flex; justify-content: center; align-items: center; text-align: center; font-size: 16px; }
+.ds-social li a{ border-radius: 100%; color: #FFF; width: 24px; height: 24px; background-color: var(--highlight-colour); display:flex; justify-content: center; align-items: center; text-align: center; font-size: 16px; }
 .ds-social li a:hover{ background-color: #000; color: #FFF; }
 /*-----------------------------------------------------------------
   2. >>> Banner Style
@@ -55,17 +58,17 @@ svg,img { max-width: 100%; height: auto; }
 .ds-numbervalulist{ list-style: none; display: flex; align-items: center; flex-wrap: wrap; margin: 0; padding: 0; margin-top: 60px; }
 .ds-numbervalulist li{ margin-right: 60px; }
 .ds-numbervalulist li:last-child{ margin-right: 0; }
-.ds-numbervalulist strong{ display: block; color: #F26464; font-size: 36px; font-weight: 800; }
+.ds-numbervalulist strong{ display: block; color: var(--highlight-colour); font-size: 36px; font-weight: 800; }
 .ds-numbervalulist span{ font-size: 16px; letter-spacing: 1px; }
 /*-----------------------------------------------------------------
   3. >>> About Style
 ----------------------------------------------------------------*/
 .ds-about-section{ padding-top: 60px; padding-bottom: 120px; }
-.ds-heading{ display: inline-block; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; border-bottom: 3px solid #F26464; padding-bottom: 7px; margin-bottom: 23px; }
+.ds-heading{ display: inline-block; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; border-bottom: 3px solid var(--highlight-colour); padding-bottom: 7px; margin-bottom: 23px; }
 .ds-about-section p{ color: #373737; font-size: 24px; line-height: 40px; font-weight: 300; margin-bottom: 60px; }
 
-.ds-button{ display: inline-block; text-transform: uppercase;font-size: 12px;line-height: 13px;font-weight: 600;letter-spacing: 3px; color:#F26464; padding:17px 30px;  border: 2px solid #F26464;border-radius: 60px; }
-.ds-button:hover{ background-color:#F26464 ; color: #FFF; }
+.ds-button{ display: inline-block; text-transform: uppercase;font-size: 12px;line-height: 13px;font-weight: 600;letter-spacing: 3px; color:var(--highlight-colour); padding:17px 30px;  border: 2px solid var(--highlight-colour);border-radius: 60px; }
+.ds-button:hover{ background-color:var(--highlight-colour) ; color: #FFF; }
 .ds-arrow-button i{ display: inline-block; vertical-align: middle; }
 /*-----------------------------------------------------------------
   4. >>> Skills Style
@@ -118,8 +121,84 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 .ds-footer section p{ letter-spacing: 1.13px; color: #FFF; font-size: 18px; margin-bottom: 40px; }
 .ds-copyright{ color: rgba(255,255,255,0.5); letter-spacing: 1px; font-size: 16px; }
 .ds-copyright a{color: rgba(255,255,255,0.5);}
-.ds-copyright a:hover{ color: #F26464; }
+.ds-copyright a:hover{ color: var(--highlight-colour); }
 
+
+/*-----------------------------------------------------------------
+  8. >>> Footer Style
+----------------------------------------------------------------*/
+.ds-aoe-section{
+	padding-bottom: 105px;
+}
+
+.aoe-grid {
+	display: grid;
+	grid-column: auto;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/4)), 1fr));
+	justify-items: center;
+	padding-top: 50px;
+}
+
+.aoe-grid-heading {
+	display: block;
+	font-size: 18px;
+	opacity: 0.6;
+}
+
+.aoe-grid-item {
+	max-width: 300px;
+	font-size: 16px;
+	color: #373737;
+	text-align: center;
+	cursor: text;
+}
+
+.aoe-grid-item:hover .aoe-item-heading {
+	animation: aoe-heading-anim ease-in-out 200ms forwards;
+}
+
+.aoe-grid-item:hover svg {
+	animation: aoe-svg-anim ease-in-out 200ms forwards;
+}
+
+.aoe-grid-item svg {
+	text-align: center;
+	margin: auto;
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+}
+
+@keyframes aoe-heading-anim {
+	from {
+		color: #373737;
+	}
+	to {
+		color: var(--highlight-colour);
+	}
+}
+
+@keyframes aoe-svg-anim {
+	from {
+		fill: #373737;
+	}
+	to {
+		fill: var(--highlight-colour);
+	}
+}
+
+.aoe-item-heading {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.aoe-item-content {
+	opacity: 0.6;
+	font-size: 15px;
+	padding-top: 12px;
+}
 
 
 /*-------------------------------------------------------------------------------
