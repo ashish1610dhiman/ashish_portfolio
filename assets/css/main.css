@@ -58,7 +58,7 @@ svg,img { max-width: 100%; height: auto; }
 .ds-numbervalulist{ list-style: none; display: flex; align-items: center; flex-wrap: wrap; margin: 0; padding: 0; margin-top: 60px; }
 .ds-numbervalulist li{ margin-right: 60px; }
 .ds-numbervalulist li:last-child{ margin-right: 0; }
-.ds-numbervalulist strong{ display: block; color: var(--highlight-colour); font-size: 36px; font-weight: 800; }
+.ds-numbervalulist strong{ display: block; color: var(--highlight-colour); font-size: 36px; font-weight: 610; }
 .ds-numbervalulist span{ font-size: 16px; letter-spacing: 1px; }
 /*-----------------------------------------------------------------
   3. >>> About Style
